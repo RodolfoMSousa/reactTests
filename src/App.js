@@ -1,17 +1,19 @@
 import { Fragment } from 'react';
 import './App.css';
 import React from 'react';
-import { ThemeProvider } from '@mui/material';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 import theme from './theme';
-import Root from 'pages/Root';
+import Buttons from 'pages/Buttons';
+import Text from 'pages/Typography'
 
 function App() {
   return (
     <Fragment>
 			<ThemeProvider theme={theme}>
-        <div>
-          <Root></Root>
-        </div>
+        <CssBaseline >
+        <Buttons></Buttons>
+        <Text></Text>
+        </CssBaseline>
       </ThemeProvider>
 		</Fragment>
   );
